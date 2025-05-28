@@ -44,6 +44,8 @@ depend() {
     after firewall
 }
 ```
+Maybe you must enable *fastgeoip* and cahge *port* using: `command="/opt/zoraxy/zoraxy -port=:8000 -fastgeoip=true"`.
+
 Enable and start
 ```
 rc-update add zoraxy default
