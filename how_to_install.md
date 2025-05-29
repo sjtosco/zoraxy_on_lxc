@@ -10,6 +10,7 @@ ln -s /opt/zoraxy/zoraxy /usr/local/bin/zoraxy
 
 ## Service
 ### For Debian based distro
+```
 touch /etc/systemd/system/zoraxy.service
 cat <<EOF >/etc/systemd/system/zoraxy.service
 [Unit]
@@ -25,6 +26,7 @@ Restart=always
 WantedBy=multi-user.target
 EOF
 systemctl enable -q --now zoraxy
+```
 
 ### For Alpine linux
 
