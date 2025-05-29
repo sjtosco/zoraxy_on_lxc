@@ -36,7 +36,7 @@ Create `/etc/init.d/zoraxy` **(chmod +x)**:
 #!/sbin/openrc-run
 
 description="General purpose request proxy and forwarding tool"
-command="/opt/zoraxy/zoraxy"
+command="zoraxy"
 command_background=true
 directory="/opt/zoraxy"
 pidfile="/run/zoraxy.pid"
@@ -46,7 +46,7 @@ depend() {
     after firewall
 }
 ```
-Maybe you must enable *fastgeoip* and cahge *port* using: `command="/opt/zoraxy/zoraxy -port=:8000 -fastgeoip=true"`.
+Maybe you must enable *fastgeoip* and cahge *port* using: `command_args="-port=:8000 -fastgeoip"`.
 
 Enable and start
 ```
